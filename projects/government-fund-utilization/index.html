@@ -8,6 +8,33 @@ main{max-width:1280px;padding:42px 30px 56px}.top{margin-bottom:4px}h1{font-size
 .chartnav{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:15px 0 4px;padding:8px 0}.chartnav span{font-size:11px;font-weight:700;color:#7bf0e7;letter-spacing:.03em;margin-right:4px}.chartnav a{font-size:11px;color:#cbd8ee;text-decoration:none;border:1px solid #344764;border-radius:99px;padding:5px 10px;background:#121d30}.chartnav a:hover,.chartnav a:focus-visible{color:#07131c;background:#63e4dc;border-color:#63e4dc;outline:none}.card[id]{scroll-margin-top:14px}
 .svgchart.exception{height:340px}.exceptionbar{fill:#ff9b71;filter:drop-shadow(0 0 4px #ff9b7166)}.wide{grid-column:1/-1}.question{color:var(--muted);font-size:13px;margin:2px 0 12px;line-height:1.55}
 .takeaway{font-size:12px;color:#91f0e5;font-weight:650;margin:11px 0 0;line-height:1.55}.charttip{display:none;position:fixed;z-index:20;max-width:min(300px,calc(100vw - 24px));padding:9px 12px;border:1px solid #597398;border-radius:9px;background:#101a2b;color:#eff6ff;font-size:12px;line-height:1.45;box-shadow:0 8px 28px #0009;pointer-events:none}.svgchart [data-tip]{cursor:crosshair}.svgchart [data-tip]:focus{outline:none;filter:drop-shadow(0 0 5px #fff)}.svgchart.delivery{height:190px}
+/* Editorial analytics restyle */
+:root{--ink:#182a32;--muted:#596d73;--paper:#f2f5f3;--card:#ffffff;--line:#dbe5e2;--green:#087f78;--green2:#5478b8;--lime:#a56838;--orange:#cf6848;--red:#b94d56;--shadow:0 12px 30px #12302a0b}
+body{background:radial-gradient(ellipse at 90% 0%,#e2eeea 0,transparent 32%),var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1240px;padding:34px 28px 38px}
+.top{align-items:center;background:linear-gradient(115deg,#152e38,#214853 70%,#2c6264);border-radius:20px;padding:30px 34px;margin-bottom:22px;box-shadow:0 18px 38px #132e371c}
+.top h1{color:#f5fbf9;background:none;-webkit-text-fill-color:#f5fbf9;font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,4vw,46px);font-weight:600;letter-spacing:-.035em;line-height:1.05;margin:0 0 11px}
+.top .kicker{color:#84e0ce;letter-spacing:.14em;font-size:10px}
+.top .dek{color:#c6d8d7;font-size:14px;line-height:1.55}
+.filetag{background:#ffffff12;border-color:#ffffff3b;color:#e8f7f3;box-shadow:none;font-weight:650}
+.question{margin:0 4px 18px;color:#53666a;font-size:13px}
+.grid{gap:17px}
+.card{background:var(--card);border-color:#dfe8e5;border-radius:16px;padding:20px 21px;box-shadow:0 8px 22px #19332f0a}
+.card:before{left:21px;right:21px;background:linear-gradient(90deg,#07877e,#86c9b4 35%,transparent 75%);opacity:.62}
+.card h2{color:#19343c;font-family:Georgia,"Times New Roman",serif;font-size:19px;font-weight:600;letter-spacing:-.015em;line-height:1.25}
+.desc{color:#65777a;font-size:12px;line-height:1.5}
+.svgchart text{fill:#53676d;font-size:11px}
+.axis{stroke:#dce5e3;stroke-width:1}
+.bar{fill:#138d82;filter:none}
+.bar.low{fill:#cc7857;filter:none}
+.trend{stroke:#0d817b;filter:none;stroke-width:3.5}
+.pt{fill:#fff;stroke:#0d817b;filter:drop-shadow(0 2px 3px #0d817b26)}
+.datalabel{fill:#176f69!important;font-weight:700}
+.exceptionbar{fill:#ce7654;filter:none}
+.takeaway{background:#edf6f2;border-left:3px solid #15877b;border-radius:0 7px 7px 0;color:#23554f;padding:8px 10px;font-size:12px;font-weight:600;margin-top:12px}
+.charttip{background:#17333b;color:#f3fbf8;border-color:#335b60;border-radius:9px;box-shadow:0 10px 26px #122d3333}
+.foot{color:#607176;font-size:11px;line-height:1.65;border-top:1px solid #d9e4e0;padding:14px 2px 0;margin-top:19px}
+@media(max-width:760px){main{padding:18px 13px 28px}.top{padding:24px 20px;border-radius:15px;gap:12px}.top h1{font-size:clamp(28px,8vw,38px);line-height:1.08}.filetag{align-self:flex-start}.grid{grid-template-columns:1fr;gap:13px}.card,.card.wide{grid-column:1;padding:17px 16px}.svgchart{height:260px}.svgchart.year{height:220px}.svgchart.delivery{height:190px}.svgchart.exception{height:auto;min-height:300px}}
 </style></head><body><main>
 <div class="top"><div><h1>WHERE RELEASED FUNDS ARE GOING</h1><div class="kicker">Fund tracking · supplied dataset</div><p class="dek">A review of release-to-use rates and reported delivery across states and financial years.</p></div><div class="filetag">1,000 source records</div></div>
 <p class="question">A focused look at changes over time, differences by state, alternate delivery measures, and a surprising target exception.</p>
