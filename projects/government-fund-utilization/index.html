@@ -35,14 +35,38 @@ main{max-width:1240px;padding:34px 28px 38px}
 .charttip{background:#17333b;color:#f3fbf8;border-color:#335b60;border-radius:9px;box-shadow:0 10px 26px #122d3333}
 .foot{color:#607176;font-size:11px;line-height:1.65;border-top:1px solid #d9e4e0;padding:14px 2px 0;margin-top:19px}
 @media(max-width:760px){main{padding:18px 13px 28px}.top{padding:24px 20px;border-radius:15px;gap:12px}.top h1{font-size:clamp(28px,8vw,38px);line-height:1.08}.filetag{align-self:flex-start}.grid{grid-template-columns:1fr;gap:13px}.card,.card.wide{grid-column:1;padding:17px 16px}.svgchart{height:260px}.svgchart.year{height:220px}.svgchart.delivery{height:190px}.svgchart.exception{height:auto;min-height:300px}}
+/* Full HD dark dashboard theme */
+:root{--ink:#e8f1fb;--muted:#a5b4c8;--paper:#080d18;--card:#101b2b;--line:#263852;--green:#59e0d2;--green2:#8d8bff;--lime:#f5c06c;--orange:#ff9b72;--red:#ff7189;--shadow:0 16px 42px #0005,0 0 30px #30d9ce0a}
+body{background:radial-gradient(ellipse at 8% -15%,#142a48 0,transparent 40%),radial-gradient(ellipse at 100% 8%,#211b40 0,transparent 38%),var(--paper);color:var(--ink)}
+main{max-width:1700px;padding:26px 38px 30px}
+.top{background:linear-gradient(112deg,#101f33,#142b3d 65%,#25204b);border:1px solid #30435c;border-radius:20px;padding:24px 30px;margin-bottom:14px;box-shadow:0 16px 38px #0004,0 0 26px #51e4d309}
+.top h1{color:#f3f7ff;-webkit-text-fill-color:#f3f7ff;font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:clamp(31px,3vw,45px);font-weight:760;letter-spacing:-.045em;line-height:1.05;margin-bottom:7px}
+.top .kicker{color:#6de9db}.top .dek{color:#aebed2}
+.filetag{background:#101b2c;border-color:#3a506e;color:#c7d9ee}
+.question{color:#aab8cc;margin:0 4px 13px}
+.grid{gap:16px}
+.card{background:linear-gradient(145deg,#111e30f5,#0d1727f7);border-color:#253650;border-radius:16px;padding:17px 20px;box-shadow:0 10px 28px #0003;overflow:visible}
+.card:before{left:20px;right:20px;background:linear-gradient(90deg,#59e0d2,#8d8bff 42%,transparent 86%);opacity:.72}
+.card h2{display:flex;align-items:center;gap:10px;color:#edf4ff;font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:17px;font-weight:680;letter-spacing:-.02em;line-height:1.3}
+.charticon{width:29px;height:29px;flex:0 0 29px;display:inline-grid;place-items:center;border-radius:9px;background:#173345;color:#73eee0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:19px;font-weight:700;box-shadow:inset 0 0 0 1px #4fcbbb30}
+.desc{color:#9cacc2}
+.svgchart text{fill:#aab9ce;font-size:11px}.axis{stroke:#2b3b54;stroke-width:1}
+.bar{fill:#59e0d2;filter:drop-shadow(0 0 5px #59e0d242)}.bar.low{fill:#ff9b72;filter:drop-shadow(0 0 5px #ff9b7240)}
+.trend{stroke:#59e0d2;filter:drop-shadow(0 0 6px #59e0d255);stroke-width:3}.pt{fill:#e7fffb;stroke:#59e0d2;filter:drop-shadow(0 0 6px #59e0d277)}
+.datalabel{fill:#83f1e4!important;font-weight:700}.exceptionbar{fill:#ff9b72;filter:drop-shadow(0 0 5px #ff9b7240)}
+.takeaway{background:#142b36;border-left-color:#59e0d2;color:#c8ece7}
+.charttip{background:#101b2c;color:#f2f7ff;border-color:#405a79;box-shadow:0 10px 28px #0008}
+.foot{color:#899bb3;border-color:#26364d}
+@media(min-width:1400px){main{padding:24px 42px 26px}.top{padding:23px 30px}.grid{gap:18px}.card{padding:17px 21px}.card h2{font-size:18px}}
+@media(max-width:760px){main{padding:14px 12px 24px}.top{padding:21px 18px;border-radius:15px;align-items:flex-start}.top h1{font-size:clamp(27px,8vw,36px)}.grid{grid-template-columns:1fr;gap:12px}.card,.card.wide{grid-column:1;padding:16px 15px}.card h2{font-size:16px}.question{font-size:12px}.svgchart{height:260px}.svgchart.year{height:220px}.svgchart.delivery{height:190px}.svgchart.exception{min-height:300px}}
 </style></head><body><main>
 <div class="top"><div><h1>WHERE RELEASED FUNDS ARE GOING</h1><div class="kicker">Fund tracking · supplied dataset</div><p class="dek">A review of release-to-use rates and reported delivery across states and financial years.</p></div><div class="filetag">1,000 source records</div></div>
 <p class="question">A focused look at changes over time, differences by state, alternate delivery measures, and a surprising target exception.</p>
 <section class="grid">
-<article class="card" id="yearSection"><h2>Has utilization shifted by year?</h2><p class="desc">Funds utilized ÷ funds released · weighted by rupees · %</p><svg id="yearChart" class="svgchart year" aria-label="Utilization by financial year"></svg><p class="takeaway" id="yearNote"></p></article>
-<article class="card" id="stateSection"><h2>Where does utilization differ by state?</h2><p class="desc">Funds utilized ÷ funds released · weighted by rupees · %</p><svg id="stateChart" class="svgchart" aria-label="Utilization by state"></svg><p class="takeaway">Takeaway: state rates range from 59.1% to 74.0% (14.9 percentage points).</p></article>
-<article class="card" id="deliverySection"><h2>Do delivery measures tell the same story?</h2><p class="desc">Overall achieved ÷ target totals, from available records</p><svg id="deliveryChart" class="svgchart delivery" aria-label="Financial use, physical achievement, and beneficiary coverage rates"></svg><p class="takeaway">Takeaway: the delivery measures trail financial use by 4.1 to 6.7 percentage points.</p></article>
-<article class="card wide" id="exceptionSection"><h2>Where does reported coverage exceed its target?</h2><p class="desc">Share of records where beneficiaries covered exceed target · rows with both counts</p><svg id="exceptionChart" class="svgchart exception" aria-label="Records where beneficiaries covered exceed target by scheme"></svg><p class="takeaway" id="exceptionNote"></p></article>
+<article class="card" id="yearSection"><h2><span class="charticon" aria-hidden="true">◷</span>Has utilization shifted by year?</h2><p class="desc">Funds utilized ÷ funds released · weighted by rupees · %</p><svg id="yearChart" class="svgchart year" aria-label="Utilization by financial year"></svg><p class="takeaway" id="yearNote"></p></article>
+<article class="card" id="stateSection"><h2><span class="charticon" aria-hidden="true">⌖</span>Where does utilization differ by state?</h2><p class="desc">Funds utilized ÷ funds released · weighted by rupees · %</p><svg id="stateChart" class="svgchart" aria-label="Utilization by state"></svg><p class="takeaway">Takeaway: state rates range from 59.1% to 74.0% (14.9 percentage points).</p></article>
+<article class="card" id="deliverySection"><h2><span class="charticon" aria-hidden="true">≋</span>Do delivery measures tell the same story?</h2><p class="desc">Overall achieved ÷ target totals, from available records</p><svg id="deliveryChart" class="svgchart delivery" aria-label="Financial use, physical achievement, and beneficiary coverage rates"></svg><p class="takeaway">Takeaway: the delivery measures trail financial use by 4.1 to 6.7 percentage points.</p></article>
+<article class="card wide" id="exceptionSection"><h2><span class="charticon" aria-hidden="true">↗</span>Where does reported coverage exceed its target?</h2><p class="desc">Share of records where beneficiaries covered exceed target · rows with both counts</p><svg id="exceptionChart" class="svgchart exception" aria-label="Records where beneficiaries covered exceed target by scheme"></svg><p class="takeaway" id="exceptionNote"></p></article>
 </section>
 <p class="foot"><b>Reading the data.</b> Source: the supplied workbook (1,000 rows); amounts were recorded in lakh rupees. Fund-use calculations include 940 rows with both amounts; delivery measures use 975 physical and 955 beneficiary value pairs. State groups contain at least 85 rows, year groups at least 149, and exception-by-scheme groups 67–101. Personal contact details, record IDs, and remarks are excluded. Release-date mismatches with stated financial years remain in the source; year comparisons use the stated year. This file presents reported data and does not independently verify spending or delivery.</p>
 <div id="chartTip" class="charttip" role="status" aria-live="polite"></div>
